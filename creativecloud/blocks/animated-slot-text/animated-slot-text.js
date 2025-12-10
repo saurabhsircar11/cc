@@ -32,7 +32,7 @@ function logError(message, error) {
   window.lana?.log(`Animation slot text ${message}: ${error}`, LANA_OPTIONS);
 }
 
-async function fetchAnimationLabels(miloLibs, getFedsPlaceholderConfig, replaceKeyArray) {
+async function fetchAnimationLabels(getFedsPlaceholderConfig, replaceKeyArray) {
   try {
     const [pauseMotion, playMotion, pauseIcon, playIcon] = await replaceKeyArray(
       PLACEHOLDER_LABELS,
@@ -529,7 +529,6 @@ export default async function init(el) {
     const { getFederatedContentRoot, getFedsPlaceholderConfig } = await import(`${miloLibs}/utils/utils.js`);
     const { replaceKeyArray } = await import(`${miloLibs}/features/placeholders.js`);
     animationLabels = await fetchAnimationLabels(
-      miloLibs,
       getFedsPlaceholderConfig,
       replaceKeyArray,
     );
