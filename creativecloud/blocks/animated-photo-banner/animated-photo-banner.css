@@ -162,6 +162,7 @@
   }
 
   .animated-photo-banner-title {
+    font-family: "Adobe Clean Black", var(--body-font-family);
     margin-bottom: 5rem;
   }
 

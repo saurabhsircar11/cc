@@ -154,10 +154,11 @@ function parseSlotData(block) {
 
 function getSlotTextItems(items) {
   try {
+    if (items?.length < 1) return [];
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-      return items?.length ? [items[items.length - 1]] : [];
+      return [items[items.length - 1]];
     }
-    return items?.length ? items.map((item) => item.replace(/\./g, '')) : [];
+    return items.map((item) => item.replace(/\./g, ''));
   } catch (err) {
     logError('Failed to process slot text items', err);
     return [];
