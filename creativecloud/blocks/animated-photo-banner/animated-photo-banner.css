@@ -162,11 +162,11 @@
   }
 
   .animated-photo-banner-title {
-    font-family: "Adobe Clean Black", var(--body-font-family);
     margin-bottom: 5rem;
   }
 
   .animated-photo-banner-title h1 {
+    font-family: "Adobe Clean Black", var(--body-font-family);
     font-size: 160px;
     letter-spacing: -0.5rem;
   }
