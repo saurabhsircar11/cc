@@ -1,3 +1,4 @@
+// hjk
 export function debounce(callback, time = 300) {
   if (typeof callback !== 'function') return undefined;
 
